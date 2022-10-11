@@ -1,0 +1,283 @@
+.form
+    margin: 32px 0 0
+    width: 100%
+    max-width: 570px
+    color: #828282
+
+    .vs__dropdown-toggle
+        font-size: 20px
+        padding: 5px 17px 6px 3px
+        margin-bottom: 16px
+        border-radius: 5px
+        height: 44px
+
+    .vs__open-indicator
+        flex: 1 0 auto
+
+    .vs__selected
+        color: #727272
+
+// .form-input
+//     position: relative
+//     width: 100%
+//     margin-bottom: 16px
+
+//     span
+//         position: absolute
+//         left: 10px
+//         top: 50%
+//         transform: translateY(-50%)
+//         transition: all .3s
+//         font-size: 20px
+//         padding: 0 4px
+//         background: #fff
+
+//     input
+//         height: 44px
+//         font-size: 20px
+//         padding: 0 14px 0 10px
+//         border-radius: 5px
+//         border: 1px solid #e0e0e0
+//         width: 100%
+//         &:focus ~ span
+//             top: 0
+//             font-size: 14px
+//             z-index: 3
+
+//     textarea
+//         height: 105px
+//         font-size: 20px
+//         padding: 0 14px 0 10px
+//         border-radius: 5px
+//         border: 1px solid #e0e0e0
+//         width: 100%
+//         resize: none
+//         &:focus ~ span
+//             top: 0
+//             font-size: 14px
+//             z-index: 3
+
+.form-textarea
+    & span
+        top: 25%
+
+.required
+    color: red
+    display: inline-block
+    font-size: inherit
+
+b.required
+    font-weight: normal
+    display: inline-block 
+
+.checkbox-text
+    flex: 1
+    font-size: 14px
+    color: #8f8f8f
+
+    a
+        color: #ef4136
+        text-decoration: underline
+
+.checkbox
+    position: relative
+    width: 20px
+    height: 20px
+    margin-right: 8px
+
+    span
+        display: inline-block
+        border: 1px solid #ef4136
+        border-radius: 3px
+        width: 100%
+        height: 100%
+
+        &::after
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            background-size: 13px 10px
+            width: 13px
+            height: 10px
+            opacity: 0
+            background-image: url('../images/icons/check.svg')
+            background-repeat: no-repeat
+
+    input
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: 20
+        opacity: 0
+
+        &:checked
+            ~ span:after
+                opacity: 1
+
+.form-submit
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    cursor: pointer
+    width: 100%
+    max-width: 238px
+
+    input
+        width: 100%
+        background-color: #ef4136
+        height: 50px
+        color: #fff
+        font-size: 20px
+        border: 0
+        cursor: pointer
+        text-align: center
+        border-radius: 5px
+        height: 44px
+
+
+
+.big-form
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    width: 100%
+    & .form
+        margin-top: 0px
+    & .btn-default
+        position: unset
+        max-width: 110px
+        & input
+            font-size: 16px
+    & .form-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+    & .form-checkbox
+        max-width: 400px
+
+    .btn-download
+        position: relative
+        cursor: pointer
+        max-width: 100%
+        margin-bottom: 16px
+        display: flex
+        justify-content: flex-end
+
+        .btn-default
+            max-width: initial
+            width: auto
+            padding: 0 10px
+
+        .form-input
+            width: auto
+            position: static
+
+        input
+            position: absolute
+            opacity: 0
+            height: 50px
+            left: 0
+            width: 100%
+            right: 0
+            top: 0
+            bottom: 0
+            max-width: 100%
+
+
+.form-subtitle
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    line-height: 1.45
+
+    div:not(:first-child)
+        margin-top: 5px
+
+
+.form-rating
+    margin-bottom: 15px
+
+    > span
+        display: inline-block
+        font-size: 18px
+        margin-bottom: 6px
+
+    // label
+    //     display: flex
+    //     flex-direction: row-reverse
+
+.vue-star-rating svg
+    fill: #3187c4
+    opacity: 0.5
+    // opacity: 0.6
+
+.vue-star-rating-star
+    margin-right: 4px
+// .rating-item
+//     position: relative
+//     width: 24px
+//     height: 24px
+
+//     span
+//         position: absolute
+//         background-image: url('../images/star.svg')
+//         padding: 0 8px 0 0
+//         background-size: 24px
+//         background-position: 0 50%
+//         background-repeat: no-repeat
+//         z-index: 1
+//         width: 100%
+//         height: 100%
+
+//         &.active
+//             background-image: url('../images/star-filled.svg')
+        
+//     input
+//         width: 100%
+//         height: 100%
+//         opacity: 0
+//         position: absolute
+//         z-index: 10
+
+//         // &:checked ~ span, 
+//         // &:hover + input span
+//         //     background-image: url('../images/star-filled.svg')
+//     &:hover > span,
+//     &:hover ~ div span
+//         background-image: url('../images/star-filled.svg')
+
+    
+.form-single-page 
+    z-index: 50
+    padding: 0 10px
+    display: flex
+    border-radius: 5px 
+
+    input
+        flex: 1 1 auto
+        min-width: auto
+
+        &:focus
+            outline: none
+    
+    button
+        flex: 1 0 35px
+        height: 44px
+        background-color: $red
+        background-image: url('../images/icons/arr-btn-w.svg')
+        background-position: 50%
+        background-repeat: no-repeat
+        background-size: 11px 21px
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+
+@media screen and (max-width: 768px)
+    .checkbox span
+        background-color: #fff

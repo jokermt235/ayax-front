@@ -1,0 +1,801 @@
+.section.no-padding
+    padding-top: 0px
+    padding-bottom: 0px
+.grey
+    main
+        background-color: #f2f2f2
+.product-card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    cursor: pointer
+    border-radius: 5px
+    overflow: hidden
+    position: relative
+    border: solid 1px #d2d2d2
+    height: 514px
+
+    &:hover
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+        & .product-card--views
+            opacity: 1
+    &--slider
+        width: 100%
+        height: 210px
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        overflow: hidden
+        position: relative
+    &--img
+        width: 100%
+        height: 100%
+        position: relative
+        z-index: 11
+        & img
+            object-fit: cover
+            width: 100%
+            height: 100%
+    &--info
+        padding: 10px
+        border-bottom: none
+        position: relative
+        background: white
+        width: 100%
+        min-height: 280px
+    &--name
+        font-size: 15px
+        height: 36px
+        padding-top: 0.1em
+        overflow: hidden
+        position: relative
+        font-weight: 400
+        margin-top: 30px
+    &--price
+        font-size: 25px
+        font-weight: 700
+        margin-bottom: 5px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--cost
+        color: #868181
+        font-size: 14px
+        margin-bottom: 9px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--mortgage
+        color: #868181
+        font-size: 14px
+        margin-bottom: 10px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--data
+        color: #868181
+        font-size: 14px
+        margin-bottom: 5px
+        & span:nth-child(2)
+            margin-left: 17px
+
+        span::before
+            content: ''
+            width: 8px
+            height: 8px
+            display: inline-block
+            background-color: #d8d8d8
+            margin-right: 7px
+            transform: rotate(45deg)
+            position: relative
+
+    &--place
+        font-size: 16px
+        margin-top: 20px
+        margin-bottom: 10px
+        line-height: 1.44
+        height: 70px
+        overflow: hidden
+    &--btn
+        color: #000
+        font-weight: 400
+        font-size: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 44px
+        width: 100%
+        background: white
+        border: solid 1px #d2d2d2
+        border-bottom-left-radius: 5px
+        border-bottom-right-radius: 5px
+        position: relative
+        z-index: 20
+        &:hover
+            border: none
+            background: #ef4136
+            color: #fff
+    &--crown
+        position: absolute
+        top: 15px
+        right: 15px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        z-index: 100
+        & img
+            width: 24px
+            height: 24px
+            object-fit: contain
+    &--views
+        opacity: 0
+        position: absolute
+        top: 15px
+        left: 15px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-radius: 5px
+        background-color: rgba(255,255,255,.65)
+        padding: 5px
+        transition: all 0.34s ease-in
+        z-index: 15
+        & img
+            width: 18px
+            height: 18px
+            object-fit: contain
+        & span
+            display: flex
+            justify-content: center
+            align-items: center
+        & span:nth-child(2)
+            margin-left: 7px
+            font-size: 14px
+            line-height: 1.1
+            color: #000000
+    &--icon
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: absolute
+        top: -23px
+        right: 10px
+        z-index: 50
+    &--compare
+        width: 40px
+        height: 40px
+        background-color: #ffffff
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+        border-radius: 50px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        transition: all 0.34s ease-in
+        background-size: 20px
+        background-position: 50%
+        background-repeat: no-repeat
+        &:hover
+            transform: scale(1.1)
+        // div
+        //     fill: #bbb7b7
+        //     width: 20px
+        //     height: 20px
+        //     object-fit: cover
+    &--fav
+        width: 40px
+        height: 40px
+        background: #ffffff
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+        border-radius: 50px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.34s ease-in
+        background-size: 20px
+        background-position: 50%
+        background-repeat: no-repeat
+        &:hover
+            transform: scale(1.1)
+        // & svg
+        //     fill: none
+        //     stroke: #bbb7b7
+        //     width: 20px
+        //     height: 20px
+            // object-fit: cover
+    .slider-button
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        background-color: rgba(255,255,255,.5)
+
+        &::after
+            color: #000
+            font-size: 12px
+            font-weight: 700
+
+
+
+
+.product-strip
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    transition: all 0.34s ease-in
+    background: white
+    cursor: pointer
+    position: relative
+    &:hover
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+        & .product-strip--views
+            opacity: 1
+    &--slider
+        max-width: 380px
+        width: 100%
+        position: relative
+    &--img
+        width: 100%
+        max-width: 100%
+        height: 240px
+        position: relative
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &--crown
+        position: absolute
+        top: 15px
+        right: 50%
+        transform: translateX(50%)
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        width: 160px
+        height: 30px
+        font-size: 14px
+        color: white
+        background-color: rgb(239, 65, 54)
+        border-radius: 20px
+        z-index: 100
+        & span
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+    &--views
+        opacity: 0
+        position: absolute
+        top: 15px
+        left: 15px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-radius: 5px;
+        background-color: rgba(255,255,255,.65)
+        padding: 5px
+        transition: all 0.34s ease-in
+        & img
+            width: 18px
+            height: 18px
+            object-fit: contain
+        & span
+            display: flex
+            justify-content: center
+            align-items: center
+        & span:nth-child(2)
+            margin-left: 7px
+            font-size: 14px
+            line-height: 1.1
+            color: #000000
+    &--info
+        max-width: 350px
+        width: 100%
+        display: flex
+        align-items: flex-end
+        flex-direction: column
+        justify-content: flex-start
+        padding: 30px 20px 20px 10px
+        height: 240px
+    &--icon
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        position: relative
+        z-index: 11
+    &--compare
+        width: 40px
+        height: 40px
+        background: #ffffff
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+        border-radius: 50px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+        transition: all 0.34s ease-in
+        &:hover
+            transform: scale(1.1)
+        & svg
+            fill: #bbb7b7
+            width: 20px
+            height: 20px
+            object-fit: cover
+    &--fav
+        width: 40px
+        height: 40px
+        background: #ffffff
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+        border-radius: 50px
+        overflow: hidden
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.34s ease-in
+        &:hover
+            transform: scale(1.1)
+        & svg
+            fill: none
+            stroke: #bbb7b7
+            width: 20px
+            height: 20px
+            object-fit: cover
+    &--price
+        font-size: 40px
+        font-weight: 700
+        margin-bottom: 10px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--cost
+        color: #868181
+        font-size: 14px
+        margin-bottom: 5px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--mortgage
+        color: #868181
+        font-size: 14px
+        margin-bottom: 14px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--data
+        color: #868181
+        font-size: 14px
+        margin-bottom: 5px
+        & span:nth-child(2)
+            margin-left: 5px
+    &--place
+        font-size: 14px
+        margin-top: 10px
+        margin-bottom: 30px
+        line-height: 1.44
+    &--btn
+        position: relative
+        z-index: 60
+        color: #000
+        font-weight: 400
+        font-size: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 42px
+        max-width: 210px
+        width: 100%
+        border: solid 1px #d2d2d2
+        border-radius: 5px
+        transition: all 0.34s ease-in
+        margin-top: 12px
+        &:hover
+            border: solid 1px #ef4136
+            background: #ef4136
+            color: #fff
+    &--descr
+        padding: 30px 20px 20px 30px
+        height: 240px
+    &--name
+        font-size: 18px
+        font-weight: 700
+        color: #000
+        margin-bottom: 20px
+    &--text
+        font-size: 14px
+        line-height: 1.44
+
+    .swiper-pagination
+        bottom: 10px
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr))
+        gap: 8px
+        padding: 0 10px
+
+    .swiper-pagination-bullet
+        flex: 1 0 auto
+        opacity: 1
+        width: auto
+        height: 100px
+        border-radius: 0
+        background-color: transparent
+        border-bottom: 4px solid #fff
+
+        &.swiper-pagination-bullet-active
+            border-color: $red
+
+
+
+
+.product-card--banner
+    position: relative
+    height: 514px
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    flex-direction: column
+    border-radius: 5px
+    overflow: hidden
+    & .product-card--name
+        font-size: 20px
+        height: unset
+        font-weight: 700
+        line-height: 1.44
+        color: #fff
+        margin-bottom: 4px
+        padding: 10px
+        padding-bottom: 0px
+        z-index: 1
+    & .product-card--text
+        font-size: 16px
+        line-height: 1.44
+        color: #fff
+        z-index: 1
+        padding: 10px
+    & .product-card--btn
+        z-index: 1
+        width: 100%
+        max-width: 100%
+        height: 44px
+        background-color: #ef4136
+        color: #fff
+        line-height: 44px
+        font-size: 18px
+        border: none
+        border-radius: 0px
+        text-align: center
+    & .product-card--img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.product-strip--banner
+    position: relative
+    height: 260px
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    flex-direction: column
+    border-radius: 5px
+    overflow: hidden
+    & .product-strip--name
+        font-size: 20px
+        font-weight: 700
+        color: #fff
+        padding-right: 50px
+        margin-bottom: 4px
+        padding-left: 15px
+        padding-right: 15px
+        z-index: 1
+    & .product-strip--text
+        font-size: 16px
+        color: #fff
+        z-index: 1
+        padding-left: 15px
+        padding-right: 15px
+    & .product-strip--btn
+        z-index: 1
+        width: 100%
+        max-width: 100%
+        height: 44px
+        background-color: #ef4136
+        color: #fff
+        line-height: 44px
+        font-size: 18px
+        border: none
+        border-radius: 0px
+        text-align: center
+    & .product-strip--img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 0
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+.sort
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 15px
+
+    &.sort--bottom
+       border-bottom: 1px solid #d2d2d2
+       padding-bottom: 8px
+
+       p
+           margin-bottom: 8px
+
+       span,a
+           font-size: 13px
+
+    &-left
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        // width: 100%
+    &-view
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        border-radius: 5px
+        overflow: hidden
+        background-color: #fff
+        &--btn
+            background-color: #fff
+            border: 1px solid #d2d2d2
+            width: 38px
+            height: 32px
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+
+            &:after
+                position: absolute
+                width: 18px
+                height: 18px
+                display: block
+                font-family: icomoon
+                opacity: 0.5
+
+            &.active::after
+                opacity: 1
+            &.view-card::after
+                content: "\e91b"
+            &.view-strip::after
+                content: "\e91c"
+
+    &-quantity
+        color: #242424
+        font-size: 15px
+        margin-left: 40px
+        margin-right: 20px
+        & span:nth-child(2)
+            margin-left: 10px
+    &-map
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        & div
+            margin-left: 10px
+    &-dropdown
+        font-size: 15px
+        position: relative
+        width: 260px
+        &--name
+            display: flex
+            justify-content: center
+            align-items: center
+    &-list
+        position: absolute
+        top: 10px
+        left: 0
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding: 15px
+        background: white
+        border-radius: 5px
+        overflow: hidden
+        box-shadow: 2px 2px 17px 3px rgba(0, 0, 0, 0.11)
+        display: none
+        z-index: 333
+        &.active
+            display: block
+    &-item
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        margin-bottom: 10px
+        cursor: pointer
+    &-icon
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        background: #dfe1df
+        margin-right: 10px
+    &-fast
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        width: 100%
+        margin-top: 20px
+        &--title
+            font-size: 15px
+            color: rgb(136, 136, 136)
+            margin-right: 15px
+            white-space: nowrap
+        &--list
+            padding: 0px
+            margin: 0px
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            // overflow: auto
+        &--item
+            text-decoration: none
+            color: rgb(136, 136, 136)
+            background: rgb(249, 249, 249)
+            border-radius: 4px
+            padding: 4px 14px
+            border: 1px solid rgb(225, 225, 225)
+            margin: 0 8px 8px 0
+            display: block
+            cursor: pointer
+            width: max-content
+            min-width: max-content
+            white-space: nowrap
+
+
+
+
+/* The switch - the box around the slider */
+.switch
+  position: relative
+  display: inline-block
+  width: 60px
+  height: 31px
+
+
+/* Hide default HTML checkbox */
+.switch-fade
+    display: none
+
+/* The slider */
+.switch-slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #ccc
+  -webkit-transition: .4s
+  transition: .4s
+
+
+.switch-slider:before
+  position: absolute
+  content: ""
+  height: 25px
+  width: 25px
+  left: 4px
+  bottom: 3px
+  background-color: white
+  -webkit-transition: .4s
+  transition: .4s
+
+
+input:checked + .switch-slider
+  background-color: #177f17
+
+
+input:focus + .switch-slider
+  box-shadow: 0 0 1px #2196F3
+
+
+input:checked + .switch-slider:before
+  -webkit-transform: translateX(26px)
+  -ms-transform: translateX(26px)
+  transform: translateX(26px)
+
+
+/* Rounded sliders */
+.switch-slider.round
+  border-radius: 34px
+
+.switch-slider.round:before
+  border-radius: 50%
+
+
+// CHECKBOX
+
+.custom-checkbox>input
+  position: absolute
+  z-index: -1
+  opacity: 0
+
+.custom-checkbox>span
+  display: inline-flex
+  align-items: center
+  user-select: none
+  width: 100%
+  cursor: pointer
+
+.filter-selected
+    position: absolute
+    font-size: 11px
+    color: red
+    display: inline-block
+    top: 13px
+    right: 35px
+    width: 15px
+    height: 15px
+    background: #ef4136
+    line-height: 18px
+    color: #fff
+    text-align: center
+    border-radius: 100%
+
+.custom-checkbox>span::before
+    content: ''
+    width: 20px
+    height: 20px
+    border-radius: 5px
+    border: solid 1px #92969d
+    background-color: #fff
+    display: inline-block
+    box-sizing: border-box
+    flex-shrink: 0
+    flex-grow: 0
+    border-radius: 0.25em
+    margin-right: 0.5em
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 13px 10px
+
+.custom-checkbox>input:checked+span::before
+  background-image: url("https://www.ayax.ru/images/check.svg");
+
+
+.cover-link
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 10
+
+@media screen and (max-width: 992px) {
+.section-objects .section
+    .row
+        margin: 0
+    
+    .col
+        padding: 0
+
+    .row-cols-md-4 .col
+        margin: 0 0 20px
+        
+.product-card--banner
+    height: 260px }
+
+@media screen and (max-width: 768px) { 
+.sort-quantity
+    margin-left: 0
+
+.sort-dropdown,
+.sort-quantity
+    margin-bottom: 20px
+.sort-view
+    display: none}

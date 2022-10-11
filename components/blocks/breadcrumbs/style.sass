@@ -1,0 +1,28 @@
+.breadcrumbs
+    padding: 24px 0 16px
+    font-size: 14px
+
+    a
+        position: relative
+
+        &:hover
+            color: $red
+
+    a:not(:last-child):after 
+        content: '/'
+        display: inline-block
+        margin: 0 5px
+        color: inherit
+
+.breadcrumbs-absolute
+    position: absolute
+    width: 100%
+    left: 0
+    z-index: 10
+
+    a,span
+        color: #fff
+
+@media (max-width: 768px)  {
+.breadcrumbs
+    padding: 15px 0 }

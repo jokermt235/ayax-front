@@ -1,0 +1,67 @@
+.step
+    &-list
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin: 0px
+        padding: 0px
+        margin-top: 30px
+    &-item
+        position: relative
+        list-style: none
+        margin: 0px
+        padding: 0px
+        width: 100%
+        display: flex
+        justify-content: flex-start
+        height: 150px
+        &:nth-child(2n+2)
+            display: flex
+            justify-content: flex-end
+            & .step-box
+                padding-left: 0px
+                padding-right: 100px
+                text-align: right
+                &::before
+                    background-repeat: no-repeat
+                    transform: scaleX(-1)
+                    left: -77px
+            & .step-bottom
+                float: right
+        & .step-box
+            max-width: calc(50% + 23px)
+            width: 100%
+            position: relative
+            padding-left: 100px
+            &::before
+                content: ''
+                position: absolute
+                background: url('../images/pages/kupit-zhilye/step-line.png')
+                top: -28px
+                left: 76px
+                width: 100%
+                height: 100%
+                background-repeat: no-repeat
+    &-icon
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 47px
+        height: 47px
+        & img
+            object-fit: contain
+            width: 100%
+            height: 100%
+    &-top
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &-number
+        color: #d95c53
+        font-size: 32px
+        margin-bottom: 28px
+    &-bottom
+        font-size: 16px;
+        line-height: 145%;
+        color: #242424;
+        max-width: 410px

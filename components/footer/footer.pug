@@ -1,0 +1,52 @@
+footer.footer
+    .container
+        .footer-main
+            .footer-logo
+                a(href="/").logo
+                    img(src="images/ayax/ayax-logo.svg", alt="АЯКС") 
+            .footer-social
+                a(href="").footer-social--link.footer-social--fb
+                    <svg>
+                        <use xlink:href="images/svg/footer/symbols.svg#svg-fb"></use>
+                    </svg>
+                a(href="").footer-social--link.footer-social--vk
+                    <svg>
+                        <use xlink:href="images/svg/footer/symbols.svg#svg-vk"></use>
+                    </svg>
+                a(href="").footer-social--link.footer-social--inst
+                    <svg>
+                        <use xlink:href="images/svg/footer/symbols.svg#svg-inst"></use>
+                    </svg>
+                a(href="").footer-social--link.footer-social--odn
+                    <svg>
+                        <use xlink:href="images/svg/footer/symbols.svg#svg-odn"></use>
+                    </svg>
+                a(href="").footer-social--link.footer-social--youtube
+                    <svg>
+                        <use xlink:href="images/svg/footer/symbols.svg#svg-youtube"></use>
+                    </svg>
+            .footer-callback( data-bs-toggle="modal" data-bs-target="#headerSubsctibe")
+                span Заказать звонок
+            a(href="tel:+78002345842").footer-tel
+                span 8 800 23 45 842
+                span Бесплатный звонок по РФ
+        .footer-box
+            include menu/index.pug
+            include menu/index.pug
+            include menu/index.pug
+        .footer-info
+            .footer-info--left
+                .footer-reserved
+                    span Вся информация, опубликованная на сайте, носит только информационный характер и не является публичной офертой, определяемой положениями ст. 437 ГК РФ. Все права защищены. При копировании материалов с сайта гиперссылка обязательна.
+                .footer-search
+                    
+            .footer-info--right
+                .footer-copy
+                    p © 2021 ООО "АЯКС", 350020, Краснодар, ул. Рашпилевская, 179/1, 7 этаж, тел.: +7 (861) 297-00-00. Для регионов РФ 8 800 234-58-42
+                .footer-map 
+                    span Карта сайта
+.header-backdrop
+<script src="js/jquery-3.5.1.min.js"></script>   
+<script src="js/bootstrap.min.js"></script>   
+//- <script src="js/swiper.min.js"></script>   
+<script src="js/main.js"></script>   

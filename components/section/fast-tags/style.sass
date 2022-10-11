@@ -1,0 +1,164 @@
+.fast-tags
+    &--categories
+        font-size: 20px
+        font-weight: 700
+        color: black
+        margin-bottom: 15px
+        & span:nth-child(2)
+            margin-left: 10px
+    &--name
+        display: flex
+        justify-content: flex-start
+        font-size: 18px
+        color: #ef4136
+        margin-bottom: 7px
+        & span:nth-child(2)
+            color: #9d9d9d
+            margin-left: 10px
+
+.fast-tags--row
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+.tags-card
+    display: flex
+    padding: 20px
+    height: 200px
+    margin-bottom: 20px
+    border-radius: 5px
+    overflow: hidden
+    position: relative
+    color: white
+.tags-card--img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    & img
+        object-fit: cover
+        width: 100%
+        height: 100%
+.tags-card--title
+    font-size: 20px
+    color: white
+    font-weight: 700
+    margin-bottom: 20px
+    &:hover
+        color: #e2e2e2
+
+.tags-card--box a
+    color: white
+    margin-bottom: 10px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    font-size: 18px
+    & span
+        margin-right: 10px
+    &:hover
+        color: #e2e2e2
+
+.row-column
+    width: 100%
+.row-column
+    &:nth-child(2)
+        max-width: 300px
+        width: 100%
+.tags-card
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+@media screen and (max-width: 992px) {
+.fast-tags--row .slider-fast-item
+    position: relative
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    height: 320px
+
+    img
+        position: absolute
+        z-index: 1
+        left: 0
+        right: 0    
+        bottom: 0
+        width: 100%
+        top: 0
+        object-fit: cover
+    
+    &::after
+        position: absolute
+        content: ''
+        background-color: rgba(0,0,0,.5)
+        z-index: 2
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+
+.fast-tags--categories
+    color: #fff
+    padding: 15px 0
+
+.fast-tags--name
+    color: #fff
+    text-align: center
+    font-weight: 500
+    justify-content: center
+
+    span
+        color: #fff!important
+        font-weight: 500
+
+.fast-tags--row
+    margin-bottom: 40px
+
+    .swiper-container
+        overflow: visible
+
+.swiper-pagination.swiper-pag-mob
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: auto
+    white-space: nowrap
+
+    .swiper-pagination-bullet
+        width: 10px
+        height: 10px
+        background-color: $red
+        opacity: 1
+        margin: 0 5px
+        position: relative
+
+        &.swiper-pagination-bullet-active::before
+            width: 14px
+            height: 14px
+            border: solid 1px #ef4136
+            position: absolute
+            content: ''
+            border-radius: 10px
+            left: 50%
+            top: 50%
+            -webkit-transform: translate(-50%,-50%)
+            -ms-transform: translate(-50%,-50%)
+            transform: translate(-50%,-50%)
+
+.service-agency
+    padding-bottom: 30px
+    position: relative
+
+.service-swiper,
+.service-swiper .swiper-container 
+    margin: 0
+
+
+.fast-tags
+    position: relative
+    z-index: 10 }

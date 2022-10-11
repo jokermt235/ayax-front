@@ -1,0 +1,295 @@
+
+.mortgage-wrap
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    max-width: 930px
+    margin-left: auto
+    margin-right: auto
+
+
+
+
+.mortgage-sliders
+    width: 50%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    padding-right: 60px
+
+.mortgage-results
+    width: 50%
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    padding-left: 60px
+    border-left: 1px solid #d2d2d2
+
+.mortgage-calculator__credit
+    color: #000
+    margin-bottom: 15px
+
+.mortgage-calculator__credit small
+    display: block
+    font-size: 14px
+
+.mortgage-calculator__credit b
+    font-size: 40px
+    font-weight: bold
+.mortgage-calculator__result
+    display: flex
+    justify-content: flex-start
+    align-items: flex-end
+    flex-wrap: wrap
+
+.noUi-value-large
+    font-size: 12px
+    color: #000
+    font-weight: 400
+.mortgage-calculator__fieldset
+    text-align: right
+    display: block
+.mortgage-calculator__result small
+    width: 100%
+    font-size: 14px
+    display: block
+    font-weight: 400
+    color: black
+.mortgage-calculator__result .js-calc-value
+    font-size: 40px
+    font-weight: 700
+    color: #242424
+.mortgage-calculator__result
+    & small
+        &:last-child
+            width: unset
+            font-size: 40px
+            font-weight: 700
+            color: #242424
+            margin-left: 10px
+.noUi-horizontal
+    position: relative
+    width: 100%
+
+.mortgage-calculator__input
+    width: 100%
+    margin-right: 0
+    margin-bottom: 6px
+
+.noUi-tooltip
+    display: none !important
+
+.mortgage-calculator
+    overflow: visible
+
+.mortgage-calculator__input input
+    border: 0
+    width: 100%
+    text-align: right
+    padding: 0
+    font-size: 40px
+    font-weight: bold
+    color: #000
+    outline: none
+    border: none
+.mortgage-calculator__input input:focus
+    outline: none
+
+
+
+.mortgage-calculator__label
+    color: #242424
+    font-size: 14px
+    margin-bottom: 7px
+    display: block
+
+.noUi-origin .noUi-handle
+    border: 1px solid #ef4136
+    border-radius: 50%
+    background: #fff
+    cursor: pointer
+    width: 18px !important
+    height: 18px !important
+.noUi-origin .noUi-handle:after, .noUi-origin .noUi-handle:before
+    display: none
+.noUi-horizontal
+    width: 95%
+    height: 5px !important
+.noUi-base .noUi-connect
+    background: #ef4136
+.mortgage-calculator__fieldset .noUi-tooltip
+    font-size: 40px
+    font-weight: 700
+    color: #000
+.mortgage-calculator__fieldset
+    margin-bottom: 60px
+.noUi-marker-horizontal.noUi-marker
+    display: none
+
+.mortgage-calculator__fieldset .noUi-target
+    border: none
+.modal-calc
+    max-width: 1080px
+    width: 100%
+.modal-calc .mortgage-wrap
+    max-width: 1080px
+    width: 100%
+
+.small-form
+    background-color: #f2f2f2
+    text-align: left
+    max-width: 340px
+    padding: 20px
+    font-size: 14px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    color: #000
+    & p
+        display: inline-block
+        margin-bottom: 10px
+
+.small-form .form-input input
+    min-width: unset
+    -webkit-appearance: none
+.mortgage-calculator__summary
+    margin-bottom: 15px
+
+.small-form__box
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    & .form-input
+        margin-right: 0px !important
+        margin-bottom: 0px
+        & input
+            border-radius: 0px
+            color: #828282
+            border-top-left-radius: 5px
+            border-bottom-left-radius: 5px
+            &:placeholder
+                color: #828282
+        & span
+            color: #828282
+.small-form-checkbox
+    & .checkbox
+        background: white
+    & .checkbox-text
+            font-size: 12px
+.small-form button
+    background-color: #ef4136
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    width: 40px
+    height: 44px
+    border-top-right-radius: 5px
+    border-bottom-right-radius: 5px
+
+.db-inputs
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: flex
+    justify-content: flex-end
+    -ms-align-items: baseline
+    align-items: baseline
+    font-size: 18px
+
+.db-inputs>input
+    font-size: 24px !important
+
+
+.mortgage-results .js-calculate
+    display: none
+
+.mortgage-results .calc-form
+    background-color: #f2f2f2
+    text-align: left
+    max-width: 340px
+    padding: 20px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    color:#000
+
+.mortgage-results .calc-form .h
+    text-align: left
+
+.mortgage-results .calc-form p
+    text-align: left
+
+
+.form.mortgage-calculator
+    margin-top: 0
+    margin-bottom: 0
+    max-width: 100%
+
+.page-header~.mortgage-calculator
+    background: none
+    padding: 0
+
+
+@media (max-width: 991px) {
+.modal-calc
+    height: 100%
+    overflow-y: scroll
+.small-form
+    max-width: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    & p:first-child
+        display: block
+        width: 100%
+.small-form__box .form-input
+    & input:focus-visible
+        border: none
+        outline: none
+.menu-head.sub-called .menu__item.is-called .menu-level.menu-level-2
+    display: none
+
+.menu-head.sub-called .menu__item.is-called .menu-level.menu-level-2.active
+    display: block
+
+.page-header~.mortgage-calculator
+    background: none
+    width: 100%
+    padding-top: 0
+    padding-bottom: 0
+
+.mortgage-wrap
+    display: block
+
+.mortgage-sliders
+    width: 100%
+    padding-right: 0
+
+.mortgage-results
+    width: 100%
+    padding-left: 0
+    border-left: 0
+
+.noUi-marker-horizontal:first-child,
+.noUi-marker-horizontal:first-child+.noUi-value
+    transform: translateY(50%)
+
+.noUi-value-horizontal:last-child
+    left: auto !important
+    right: 0
+    transform: translateY(50%)
+
+.mortgage-results .calc-form
+    width: auto
+    max-width: initial
+    margin-left: -10px
+    margin-right: -10px }

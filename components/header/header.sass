@@ -1,0 +1,157 @@
+.header
+    position: relative
+    z-index: 901
+    border-bottom: 1px solid #e0e0e0
+
+.header-top
+    background-color: #383838
+    padding: 4px 0
+
+.header-content
+    padding: 8px 0
+    background-color: #fff
+
+.header-top--link
+    display: flex
+    align-items: center
+    color: #fff
+    margin-left: 25px
+    cursor: pointer
+
+    &:hover
+        color: #fff
+
+
+    &::before
+        content: ''
+        margin-right: 5px
+        display: inline-block
+        border-radius: 50%
+        background-repeat: no-repeat
+        background-position: 100% 0
+        width: 30px
+        height: 30px
+        background-color: #fff
+        background-size: contain
+
+
+
+.header-top-links
+    justify-content: flex-end
+
+.header-backdrop
+    background: rgba(255,255,255,.6)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    text-align: center
+    cursor: pointer
+    overflow: auto
+    display: none
+
+.call--top
+    color: #ef4136  
+    font-size: 14px
+
+    &:hover
+        color: #ef4136 
+
+.icon-phone
+    margin-right: 5px
+
+.call--tel
+    font-family: "valuesansboldpro"
+    font-size: 26px
+    line-height: 1.4em
+    display: block
+
+.call--time
+    font-size: 14px
+    display: block
+
+.header-mobile,
+.menu-mobile
+    display: none
+
+@media screen and (max-width: 992px) {
+.header
+    .container
+        padding: 0 10px
+
+.header-top,
+.call
+    display: none
+
+.header-mobile 
+    display: flex
+    align-items: center
+
+    > *
+        margin-left: 33px
+        width: 18px
+        height: 18px
+
+    svg
+        width: 18px
+        height: 18px
+
+.header-content
+    padding: 10px 0
+
+// .compare-mob
+//     background-image: url('../../../assets/images/icons/compare.svg')
+//     width: 18px
+//     height: 18px
+//     background-size: contain
+
+.logo
+    width: 80px
+
+.mobile-contact 
+    background-color: #ef4136 
+    padding: 11px 30px 20px 16px
+    border-radius: 5px
+    margin-top: 10px
+
+    *
+        color: #fff
+
+    p
+        font-size: 20px
+        font-weight: 700
+        width: 150px
+        line-height: 1.3
+
+    span
+        font-size: 16px
+        display: block
+        line-height: 1.3
+
+    a
+        font-size: 20px
+        font-weight: 700
+        margin: 18px 0 13px 0
+        display: block
+
+.mobile-soc
+    
+    a
+        background-image: url('../../../assets/images/icons/icons-social.png')
+        width: 39px
+        height: 39px
+        margin: 0 6px 3px
+        border-radius: 4px
+        background-repeat: no-repeat 
+
+.icon-fb
+    background-position: 0 -73px
+.icon-vk
+    background-position: -40px -73px
+.icon-inst
+    background-position: -80px -73px
+
+.dn
+    display: block}

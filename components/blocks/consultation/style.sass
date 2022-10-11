@@ -1,0 +1,54 @@
+.consultation
+    width: 100%
+.consultation-slider
+    display: none
+
+    &.active
+        display: block
+
+    .consult-arrow
+        width: 25px
+        height: 25px
+        border: solid 1px #d2d2d2
+        background-color: #fff
+        border-radius: 50px
+        text-align: center
+
+        &::after
+            left: 0
+            right: 0
+            top: 0
+            color: #727272
+            bottom: 0
+            margin: auto
+            font-family: icomoon!important
+            speak: none
+            font-style: normal
+            font-weight: 400
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+            content: "\e900"
+            text-indent: 0
+            font-size: 12px
+            height: 12px
+            position: absolute
+
+        &:hover
+            background-color: #ef4136
+
+            &::after
+                color: #fff
+                border-color: #fff
+
+    .swiper-button-next
+        transform: rotate(180deg)
+
+.consultation--title
+    font-size: 38px
+    font-weight: 700
+    margin: 0 0 40px
+    text-align: center
+

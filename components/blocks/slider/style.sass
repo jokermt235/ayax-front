@@ -1,0 +1,96 @@
+
+.partners-logo
+    // margin-bottom: 64px
+    margin-bottom: 15px
+
+.partners-logo--title
+    font-size: 24px
+    margin-bottom: 32px
+    text-align: center
+
+.partner-logo--img
+    display: block
+    width: 100px
+    height: 100px
+    object-fit: contain
+    object-position: center
+    margin: 0 auto 30px
+
+.partner-logo--title
+    text-align: center
+    font-weight: 400
+    font-size: 15px
+    line-height: 24px
+    text-transform: uppercase
+    max-width: 250px
+    margin: 0 auto
+
+.partners-logo-items
+    .partners-arrow
+        width: 78px
+        height: 78px
+        background: #ef4136
+        border-radius: 50%
+        display: block
+        position: absolute
+        cursor: pointer
+        border: 7px solid #fff 
+        margin: 0
+        transform: translateY(-50%)
+
+        &::after
+            // background-image: url('../images/sprite.png')
+            position: absolute
+            display: block 
+            width: 18px
+            height: 35px
+            top: 14px
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            font-size: 32px
+            color: #fff
+
+.partners-logo-items
+    .swiper-container 
+        padding: 0 100px
+        position: relative
+
+        &::after,
+        &::before
+            position: absolute
+            content: ''
+            background-color: #fff
+            top: 0
+            bottom: 0
+            right: 0
+            width: 100px
+            z-index: 8
+        
+        &::after
+            left: 0
+            right: auto
+
+@media screen and (max-width: 1024px)
+    .partners-logo
+        margin-bottom: 20px
+        
+    .partner-logo-item
+        border: solid 1px #d2d2d2
+        padding: 10px
+        justify-content: center
+        -ms-align-items: center
+        align-items: center
+        width: 230px
+    
+    .partners-logo-items
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+@media screen and (max-width: 768px)
+    .partner-logo-item 
+        width: 50%
+    
+    .partner-logo--title
+        font-size: 14px
+        line-height: 1.1

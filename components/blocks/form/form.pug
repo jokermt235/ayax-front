@@ -1,0 +1,23 @@
+form.form(action="") 
+	.form-input
+		label 
+			input(type="text")
+			span Имя
+	.form-input
+		label 
+			input(type="text")
+			span Email
+				b.required *
+	.form-info 
+		p 
+			b.required * 
+			|  Обязательные поля
+	.form-checkbox 
+		label
+			span.checkbox
+				input(type="checkbox")
+				span
+			span.checkbox-text Даю согласие на обработку персональных данных в соответствии с 
+				a(href="#") политикой конфиденциальности
+	.form-submit 
+		input(type="submit" value="Отправить")

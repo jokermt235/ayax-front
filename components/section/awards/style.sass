@@ -1,0 +1,53 @@
+.awards
+    &-subtitle
+        text-align: center
+        font-size: 16px;
+        line-height: 145%;
+        color: #242424
+        margin: -4px 0 28px
+        border: 5px solid #eee
+    &-list
+        margin: 0
+        padding: 0
+        width: 100%
+        border: 3px solid #eee
+    &-item
+        list-style: none
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid #eee
+        cursor: default
+        &:last-child
+            border-bottom: none
+        &:hover
+            background: rgba(0,187,249,.05)
+    &-name
+        font-size: 18px;
+        color: #242424
+        line-height: 1.2
+        padding: 12px
+    &-price
+        font-size: 18px;
+        color: #242424
+        line-height: 1.2
+        max-width: 360px
+        width: 100%
+        border-left: 1px solid #eee
+        padding: 12px
+
+@media (max-width: 768px)
+    .section.awards .row .col:last-child
+        padding: 0
+        
+    .awards-list .awards-item:nth-child(even)
+        background-color: #f2f2f2
+
+    .awards-price,
+    .awards-list,
+    .awards-item
+        border: 0
+
+    .awards-subtitle
+        border: 0
+        text-align: left

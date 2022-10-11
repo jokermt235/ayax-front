@@ -1,0 +1,551 @@
+
+.menu
+    display: flex
+    align-items: center
+    list-style: none
+    justify-content: center
+    margin: 0
+    padding: 0
+
+.menu-list
+    position: relative
+    padding: 4px 14px 4px
+    cursor: pointer
+    font-size: 18px
+
+
+    &::after
+        position: absolute
+        content: ''
+        height: 3px
+        width: 100%
+        left: 0
+        bottom: -30px
+        background: red
+        z-index: 25
+        display: none
+
+    &:hover
+
+        &::after
+            display: block
+
+.menu-link
+    &.active
+        color: #ef4136
+
+        &:hover
+            color: #242424
+
+.submenu
+    position: absolute
+    display: none
+    width: 280px
+    background-color: #fff
+    list-style: none
+    padding: 0
+    top: 100%
+    padding-top: 30px
+    left: 0
+    &-item
+        list-style: none
+
+.submenu-list
+    position: relative 
+
+.submenu-link
+    position: relative
+    background-color: #fff
+    border: 1px solid #e0e0e0
+    display: flex
+    align-items: center
+    padding: 0 20px
+    height: 55px
+    margin-bottom: -1px
+    font-size: 14px
+
+    &:hover,
+    &.active
+        color: #ef4136
+
+    &::before
+        content: ''
+        display: inline-block
+        margin-right: 25px
+        background-image: url('../images/icons/icons.svg')
+        background-size: 39px auto
+        width: 32px
+        height: 32px
+    &[data-nav-icon="kvartiry"]
+        &::before
+            background-position: 0 0
+            width: 28px
+            background-size: 28px auto
+            height: 28px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -28px
+    &[data-nav-icon="kottedzh"]
+        &::before
+            background-position: 0 -412px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -380px
+    &[data-nav-icon="rieltor"]
+        &::before
+            background-position: 0 -1459px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1427px
+    &[data-nav-icon="prodatnedvizhimost"]
+        &::before
+            background-position: 0 -1399px
+            height: 27px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1372px
+    &[data-nav-icon="kadastr"]
+        &::before
+            background-position: 0 -711px
+            height: 30px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -679px
+    &[data-nav-icon="ipotekakrasnodare"]
+        &::before
+            background-position: 0 -775px
+            height: 30px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -743px
+    // &[data-nav-icon="skidkinedvizhimost"]
+    //     &::before
+    //         background-position: 0 -1340px
+    //         width: 31px
+
+    //     &:hover::before,
+    //     &.active::before
+    //         background-position: 0 -1308px
+    &[data-nav-icon="programmaloyalnosti"]
+        &::before
+            background-position: 0 -654px
+            height: 24px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -630px
+
+    &[data-nav-icon="yuridicheskieuslugi"]
+        &::before
+            background-position: 0 -599px
+            height: 30px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -567px
+
+    &[data-nav-icon="otsenkakrasnodare"]
+        &::before
+            background-position: 0 -224px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -192px
+    &[data-nav-icon="istoriivozvrashcheniya"]
+        &::before
+            background-position: 0 -1276px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1244px
+
+    &[data-nav-icon="istoriiuspekha"]
+        &::before
+            background-position: 0 -1519px
+            height: 28px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1490px
+
+    &[data-nav-icon="obuchenierieltorov"]
+        &::before
+            background-position: 0 -1576px
+            height: 28px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1548px
+
+    &[data-nav-icon="rabotarieltorom"]
+        &::before
+            background-position: 0 -1948px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1916px
+
+    &[data-nav-icon="vakansiinedvizhimosti"]
+        &::before
+            background-position: 0 -1948px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1916px
+
+    &[data-nav-icon="skidkinedvizhimost"]
+        &::before
+            background-position: 0 -1340px
+            width: 31px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1308px
+
+    &[data-nav-icon="about"]
+        &::before
+            background-position: -10px -350px
+            width: 28px
+            height: 26px
+
+        &:hover::before,
+        &.active::before
+            background-position: -10px -320px
+
+    &[data-nav-icon="programmaloyalnosti"]
+        &::before
+            background-position: 0 -654px
+            height: 24px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -630px
+
+    &[data-nav-icon="newsnedvizhimost"]
+        &::before
+            background-position: 0 -838px
+            width: 27px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -806px
+
+    &[data-nav-icon="poleznyestati"]
+        &::before
+            background-position: 0 -160px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -128px
+
+    &[data-nav-icon="sotrudniki"],
+    &[data-nav-icon="rieltors"]
+        &::before
+            background-position: 0 -1084px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1052px
+
+    &[data-nav-icon="reviews"]
+        &::before
+            background-position: 0 -1212px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1180px
+
+    &[data-nav-icon="partners"]
+        &::before
+            width: 31px
+            background-position: 0 -956px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -924px
+
+    &[data-nav-icon="sertificates"]
+        &::before
+            background-position: 0 -288px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -256px
+
+    &[data-nav-icon="agenstva"]
+        &::before
+            background-position: 0 -897px
+            height: 27px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -870px
+
+    &[data-nav-icon="standarts"]
+        &::before
+            background-position: 0 -476px
+            width: 44px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -444px
+    &[data-nav-icon="obrabotkapersonalnyhdannyh"]
+        &::before
+            background-position: 0 -1020px
+            width: 39px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -988px
+    &[data-nav-icon="voprosotvet"]
+        &::before
+            background-position: 0 -1980px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -2012px
+    &[data-nav-icon="kartarayonovkrasnodara"]
+        &::before
+            background-position: 0 1334px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 1366px
+    &[data-nav-icon="kontrolkachestvo"]
+        height: 55px
+        &::before
+            background-position: 0 -2520px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -2488px
+
+.seo-nav a
+    &[data-nav-icon="doma"] 
+        &::before
+            background-image: url('../images/icons/icons-types-0.svg')
+            background-position: 0 -56px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -84px
+    &[data-nav-icon="novostroiki"] 
+        &::before
+            background-image: url('../images/icons/icons.svg')
+            background-position: 0 -1348px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 -1320px
+    &[data-nav-icon="zarubez"] 
+        &::before
+            background-image: url('../images/icons/icons.svg')
+            background-position: 0 -23px
+            height: 23px
+
+        &:hover::before,
+        &.active::before
+            background-position: 0 0
+
+.header-icons-additional
+    &::before
+        background-image: url('../images/icons/icons-types-0.svg')
+
+
+
+.sumbenu--arrow
+    position: absolute
+    background: url('../images/icons/select-drop.svg') no-repeat
+    display: block
+    width: 16px
+    height: 10px
+    right: 10px
+    top: 50%
+    margin-top: -6px
+    transform: rotate(-90deg)
+    z-index: 100
+
+.submenu-sub
+    position: absolute
+    display: none
+    left: calc(100% - 1px)
+    width: 220px
+    top: 0
+    padding: 0
+    background-color: #fff
+    border: 1px solid #e0e0e0
+
+    a
+        padding: 5px 19px 5px 20px
+        height: 35px
+        align-items: center
+        font-size: 14px
+        display: flex
+
+        &:hover
+            background-color: #fff8f8
+        &.active
+            color: $red
+
+.submenu-title-mob
+    display: none
+
+
+@media screen and (min-width: 992px) {
+.menu-list
+
+    &:hover
+
+        .submenu
+            display: block
+
+.submenu-list
+
+    &:hover
+        .submenu-sub
+            display: block }
+
+@media screen and (max-width: 992px) {
+.submenu-list
+    padding: 5px 0
+
+.menu
+    display: none
+    padding: 15px 0 10px 23px
+
+    > li:first-child > a
+        position: relative
+        color: $red 
+
+// .activateSubmenu
+//     background: $red
+//     display: inline-block
+//     width: 16px
+//     height: 16px
+
+//     background-image: radial-gradient(#212121 20%, transparent 20%), radial-gradient(#fafafa 20%, transparent 20%)
+//     background-color: #e53935
+//     background-position: 0 0, 5px 5px
+//     background-size: 3px 3px
+
+// .menu-list
+//     font-size: 16px
+//     font-weight: 700
+//     margin-bottom: 13px
+//     padding: 0
+
+//     a
+//         line-height: 22px
+
+//     &:hover
+//         // .submenu
+//         //     display: block
+        
+//         > a
+//             display: none
+
+//     // > a
+//     //     display: none
+
+.menu-mobile .menu
+    display: block
+
+.submenu-title-mob
+    display: block
+    position: relative
+    margin-bottom: 22px
+
+    &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/arr-back.svg')
+        width: 9px
+        height: 15px
+        left: -20px
+        top: 0
+
+
+
+.menu-mobile
+    width: 280px
+    display: block
+    position: fixed
+    top: 0
+    right: -100%
+    padding: 10px
+    border-radius: 5px
+    background-color: #fff
+
+    &.active
+        right: 0
+
+.menu-close
+    background: url(../images/icons/icon-close.svg) no-repeat
+    -webkit-background-size: cover
+    background-size: 17px 17px
+    width: 17px
+    height: 17px
+    position: absolute
+    top: 13px
+    right: 10px
+    cursor: pointer
+    z-index: 2
+
+.submenu
+    position: static
+    // display: block
+    width: auto
+    padding-top: 2px
+
+.submenu-link
+    padding: 0
+    border: 0
+    height: auto
+    font-weight: 400
+    position: relative
+
+    &::before
+        display: none
+
+.sumbenu--arrow
+    // top: 0
+    // margin-top: -5px
+    top: 8px
+    // margin-top: -15px
+    border: 1px solid #f5f5f5
+    height: 30px
+    width: 30px
+    background-position: center
+
+    &.active
+        transform: rotate(0)
+
+.submenu-link[data-nav-icon="kontrolkachestvo"]
+    height: auto
+
+.submenu-sub
+    position: static
+    border: 0
+    margin-top: 12px
+    // display: block
+
+    &.active
+        display: block
+
+    a
+        height: auto
+        font-weight: 400
+        padding: 2px 19px
+
+.menu-list::after
+    display: none !important
+
+
+.dn
+    display: block}

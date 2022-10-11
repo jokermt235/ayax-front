@@ -1,0 +1,147 @@
+.question
+    &-list
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        margin: 0px
+        padding: 0px
+    &-item
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        border-bottom: 1px solid #909090
+        padding-top: 20px
+        width: 100%
+        cursor: pointer
+        &.open
+            & .question-answer
+                opacity: 1
+                height: 100%
+                padding-bottom: 20px
+            & .question-name--arrow
+                transform: rotate(180deg)
+    &-name
+        font-style: normal
+        font-weight: 600
+        font-size: 20px
+        line-height: 20px
+        text-align: center
+        color: #181818
+        padding-bottom: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+    &-answer
+        font-size: 20px
+        line-height: 28px
+        color: #333333
+        padding-top: 0px
+        height: 0px
+        opacity: 0
+        overflow: hidden
+.question-name--arrow
+    transition: all 0.34s ease-in
+    & svg
+        width: 20px
+        height: 11px
+
+.faq-info
+    display: none
+.faq-info.active
+    display: block
+.faq-tab--list
+    margin: 0 0 60px
+    padding: 0
+    display: flex
+    justify-content: flex-start
+    align-items: center
+.faq-tab-wrapper
+    display: flex
+    align-items: center
+
+.faq-tab--item
+    list-style: none
+    font-size: 18px
+    padding: 20px 15px
+    position: relative
+    cursor: pointer
+    &:before
+        content: ''
+        position: absolute
+        bottom: -2px
+        left: 0
+        height: 0px
+        width: 100%
+        background: #ef4835
+.faq-tab--item.active
+    color: #ef4835
+    &:before
+        height: 4px
+        background: #ef4835
+.line
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        top: 58px
+        height: 1px
+        background: #d2d2d2
+
+.faq-search
+    margin-left: auto
+
+    input
+        border: 1px solid #e9e9e9
+        border-radius: 8px
+        padding: 11px 
+        width: 200px
+
+@media screen and (max-width: 992px) {
+.faq-tab--list
+    flex-direction: row-reverse
+    position: relative
+.faq-tab-wrapper
+    position: absolute
+    top: 0
+    border: 1px solid #e9e9e9
+    border-radius: 8px
+    background-color: #fff
+    flex-direction: column
+    height: 38px
+    overflow: hidden
+
+    &::after
+        position: absolute
+        content: ''
+        
+    &.active
+        height: auto 
+
+.faq-tab--item
+    width: 158px
+    font-size: 14px
+    padding: 12px 10px
+    order: 1
+
+.faq-tab--item.active
+    order: 0
+
+.line::before,
+.faq-tab--item::before
+    display: none
+
+.faq-search
+    margin: 0 auto 0 0
+
+    input
+        width: 170px
+
+.faq-tab--list
+    margin: 20px 0 50px
+
+.question > .section > .container
+    padding: 0 }
